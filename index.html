@@ -2342,8 +2342,8 @@ function drawBalloon(b,alpha){
   ctx.restore();
   // Nome do animal em baixo
   const fs=fitText(color.name,r*1.8,S(10),S(6)),nmW=ctx.measureText(color.name).width+S(8);
-  rrFill(x-nmW/2,y+r*0.72,nmW,fs+S(5),S(3),'rgba(0,0,0,0.45)');
-  ctx.fillStyle='#fff';ctx.font=`900 ${fs}px Fredoka One,cursive`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.shadowColor='rgba(0,0,0,0.7)';ctx.shadowBlur=S(3);ctx.fillText(color.name,x,y+r*0.72+(fs+S(5))/2);ctx.shadowBlur=0;
+  rrFill(x-nmW/2,y+r*0.58,nmW,fs+S(5),S(3),'rgba(0,0,0,0.45)');
+  ctx.fillStyle='#fff';ctx.font=`900 ${fs}px Fredoka One,cursive`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.shadowColor='rgba(0,0,0,0.7)';ctx.shadowBlur=S(3);ctx.fillText(color.name,x,y+r*0.58+(fs+S(5))/2);ctx.shadowBlur=0;
   // Fio
   ctx.beginPath();ctx.arc(x,y+r,S(5),0,Math.PI*2);ctx.fillStyle=color.dark;ctx.fill();
   ctx.beginPath();ctx.moveTo(x,y+r+S(5));ctx.bezierCurveTo(x+Math.sin(b.sway)*S(16),y+r+S(16),x+Math.sin(b.sway+1.2)*S(12),y+r+S(28),x+Math.sin(b.sway+0.6)*S(9),y+r+S(42));ctx.strokeStyle='rgba(255,255,255,0.5)';ctx.lineWidth=S(1.4);ctx.lineCap='round';ctx.stroke();
